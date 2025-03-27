@@ -1,0 +1,23 @@
+{
+  "collectionName": "components_details_sites",
+  "info": {
+    "displayName": "Site",
+    "icon": "dashboard",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "Date": {
+      "required": true,
+      "type": "date"
+    },
+    "Site": {
+      "type": "string",
+      "required": true
+    },
+    "Hour": {
+      "type": "time",
+      "required": true
+    }
+  }
+}

@@ -1,0 +1,15 @@
+{
+  "collectionName": "components_details_details_classes",
+  "info": {
+    "displayName": "Details_Class"
+  },
+  "options": {},
+  "attributes": {
+    "Additional_Details": {
+      "type": "component",
+      "repeatable": false,
+      "component": "details.site",
+      "required": true
+    }
+  }
+}
