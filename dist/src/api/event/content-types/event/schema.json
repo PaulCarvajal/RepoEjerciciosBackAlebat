@@ -41,6 +41,21 @@
             "relation": "manyToMany",
             "target": "api::class.class",
             "inversedBy": "events"
+        },
+        "Theme": {
+            "type": "component",
+            "repeatable": false,
+            "component": "event-themes.theme",
+            "required": true
+        },
+        "Dynamic_Zone": {
+            "type": "dynamiczone",
+            "components": [
+                "new-component.component-new",
+                "links.list-of-links",
+                "image-gallery.images"
+            ],
+            "required": false
         }
     }
 }

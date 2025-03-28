@@ -1,15 +1,17 @@
 {
   "collectionName": "components_details_details_classes",
   "info": {
-    "displayName": "Details_Class"
+    "displayName": "Details_Class",
+    "description": ""
   },
   "options": {},
   "attributes": {
-    "Additional_Details": {
-      "type": "component",
-      "repeatable": false,
-      "component": "details.site",
+    "classroom": {
+      "type": "string",
       "required": true
+    },
+    "schedule": {
+      "type": "time"
     }
   }
 }

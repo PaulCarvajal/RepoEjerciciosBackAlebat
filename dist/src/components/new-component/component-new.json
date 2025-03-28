@@ -1,0 +1,14 @@
+{
+    "collectionName": "components_new_component_component_news",
+    "info": {
+        "displayName": "ComponentNew",
+        "icon": "archive"
+    },
+    "options": {},
+    "attributes": {
+        "Content": {
+            "type": "blocks",
+            "required": true
+        }
+    }
+}

@@ -1,0 +1,13 @@
+{
+  "collectionName": "components_event_themes_sub_themes",
+  "info": {
+    "displayName": "Sub-theme",
+    "icon": "feather"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string"
+    }
+  }
+}

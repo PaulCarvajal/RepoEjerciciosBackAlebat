@@ -1,0 +1,16 @@
+{
+    "collectionName": "components_details_details_teachers",
+    "info": {
+        "displayName": "Details_Teacher"
+    },
+    "options": {},
+    "attributes": {
+        "especialidad": {
+            "type": "string",
+            "required": true
+        },
+        "experiencia": {
+            "type": "string"
+        }
+    }
+}

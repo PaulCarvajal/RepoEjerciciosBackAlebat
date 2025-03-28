@@ -33,6 +33,12 @@
       "relation": "manyToMany",
       "target": "api::event.event",
       "mappedBy": "classes"
+    },
+    "teachers": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::teacher.teacher",
+      "mappedBy": "classes"
     }
   }
 }

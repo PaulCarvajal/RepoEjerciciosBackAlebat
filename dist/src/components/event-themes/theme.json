@@ -1,0 +1,22 @@
+{
+    "collectionName": "components_event_themes_themes",
+    "info": {
+        "displayName": "Theme",
+        "icon": "brush",
+        "description": ""
+    },
+    "options": {},
+    "attributes": {
+        "Title": {
+            "type": "string",
+            "required": true,
+            "unique": true
+        },
+        "Sub_theme": {
+            "type": "component",
+            "repeatable": true,
+            "component": "event-themes.sub-theme",
+            "required": true
+        }
+    }
+}

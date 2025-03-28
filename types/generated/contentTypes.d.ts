@@ -394,6 +394,7 @@ export interface ApiClassClass extends Struct.CollectionTypeSchema {
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::class.class'>;
     publishedAt: Schema.Attribute.DateTime;
     Start_date: Schema.Attribute.DateTime & Schema.Attribute.Required;
+    teachers: Schema.Attribute.Relation<'manyToMany', 'api::teacher.teacher'>;
     Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -427,6 +428,13 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Description: Schema.Attribute.Blocks & Schema.Attribute.Required;
+    Dynamic_Zone: Schema.Attribute.DynamicZone<
+      [
+        'new-component.component-new',
+        'links.list-of-links',
+        'image-gallery.images',
+      ]
+    >;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<'oneToMany', 'api::event.event'>;
     Materials_Media: Schema.Attribute.Component<
@@ -434,6 +442,8 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
       false
     >;
     publishedAt: Schema.Attribute.DateTime;
+    Theme: Schema.Attribute.Component<'event-themes.theme', false> &
+      Schema.Attribute.Required;
     Title: Schema.Attribute.String &
       Schema.Attribute.Required &
       Schema.Attribute.Unique;
@@ -446,6 +456,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
 export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
   collectionName: 'teachers';
   info: {
+    description: '';
     displayName: 'Teacher';
     pluralName: 'teachers';
     singularName: 'teacher';
@@ -459,6 +470,12 @@ export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    Additional_Details: Schema.Attribute.Component<
+      'details.details-teacher',
+      false
+    > &
+      Schema.Attribute.Required;
+    classes: Schema.Attribute.Relation<'manyToMany', 'api::class.class'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

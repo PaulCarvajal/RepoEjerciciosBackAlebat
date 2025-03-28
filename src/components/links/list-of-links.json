@@ -1,0 +1,18 @@
+{
+  "collectionName": "components_links_list_of_links",
+  "info": {
+    "displayName": "List_of_Links"
+  },
+  "options": {},
+  "attributes": {
+    "Title": {
+      "type": "string",
+      "required": true,
+      "unique": true
+    },
+    "Url": {
+      "type": "string",
+      "required": true
+    }
+  }
+}
