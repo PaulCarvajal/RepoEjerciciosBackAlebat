@@ -1,0 +1,9 @@
+ejercicio1
+http://localhost:1337/api/teachers?filters[events][Title][$contains]=event&[fields][0]=Name
+
+
+Ej2
+http://localhost:1337/api/events?filters[Additional_Details][Date][$contains]=2025-02-25
+
+Ej3
+http://localhost:1337/api/events?[populate][Dynamic_Zone][on][new-component.component-new][populate][fields][0]=Content

@@ -40,6 +40,12 @@
             "repeatable": false,
             "component": "details.details-teacher",
             "required": true
+        },
+        "events": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::event.event",
+            "mappedBy": "teachers"
         }
     }
 }

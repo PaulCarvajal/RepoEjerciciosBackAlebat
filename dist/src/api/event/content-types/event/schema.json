@@ -56,6 +56,12 @@
                 "image-gallery.images"
             ],
             "required": false
+        },
+        "teachers": {
+            "type": "relation",
+            "relation": "manyToMany",
+            "target": "api::teacher.teacher",
+            "inversedBy": "events"
         }
     }
 }

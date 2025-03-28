@@ -442,6 +442,7 @@ export interface ApiEventEvent extends Struct.CollectionTypeSchema {
       false
     >;
     publishedAt: Schema.Attribute.DateTime;
+    teachers: Schema.Attribute.Relation<'manyToMany', 'api::teacher.teacher'>;
     Theme: Schema.Attribute.Component<'event-themes.theme', false> &
       Schema.Attribute.Required;
     Title: Schema.Attribute.String &
@@ -480,6 +481,7 @@ export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
     Email: Schema.Attribute.Email & Schema.Attribute.Required;
+    events: Schema.Attribute.Relation<'manyToMany', 'api::event.event'>;
     Last_name: Schema.Attribute.String & Schema.Attribute.Required;
     locale: Schema.Attribute.String;
     localizations: Schema.Attribute.Relation<
