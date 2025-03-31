@@ -15,10 +15,12 @@ export interface DetailsDetailsClass extends Struct.ComponentSchema {
 export interface DetailsDetailsTeacher extends Struct.ComponentSchema {
   collectionName: 'components_details_details_teachers';
   info: {
+    description: '';
     displayName: 'Details_Teacher';
   };
   attributes: {
     especialidad: Schema.Attribute.String & Schema.Attribute.Required;
+    experienceK: Schema.Attribute.RichText;
     experiencia: Schema.Attribute.String;
   };
 }

@@ -474,8 +474,7 @@ export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
     Additional_Details: Schema.Attribute.Component<
       'details.details-teacher',
       false
-    > &
-      Schema.Attribute.Required;
+    >;
     classes: Schema.Attribute.Relation<'manyToMany', 'api::class.class'>;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

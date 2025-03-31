@@ -39,7 +39,7 @@
       "type": "component",
       "repeatable": false,
       "component": "details.details-teacher",
-      "required": true
+      "required": false
     },
     "events": {
       "type": "relation",

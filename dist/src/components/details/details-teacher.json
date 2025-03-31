@@ -1,7 +1,8 @@
 {
     "collectionName": "components_details_details_teachers",
     "info": {
-        "displayName": "Details_Teacher"
+        "displayName": "Details_Teacher",
+        "description": ""
     },
     "options": {},
     "attributes": {
@@ -11,6 +12,9 @@
         },
         "experiencia": {
             "type": "string"
+        },
+        "experienceK": {
+            "type": "richtext"
         }
     }
 }
