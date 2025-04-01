@@ -372,6 +372,7 @@ export interface AdminUser extends Struct.CollectionTypeSchema {
 export interface ApiClassClass extends Struct.CollectionTypeSchema {
   collectionName: 'classes';
   info: {
+    description: '';
     displayName: 'Class';
     pluralName: 'classes';
     singularName: 'class';
@@ -385,6 +386,7 @@ export interface ApiClassClass extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
+    CountTeachers: Schema.Attribute.Integer;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -488,6 +490,7 @@ export interface ApiTeacherTeacher extends Struct.CollectionTypeSchema {
       'api::teacher.teacher'
     >;
     Name: Schema.Attribute.String & Schema.Attribute.Required;
+    NumberClass: Schema.Attribute.Integer;
     publishedAt: Schema.Attribute.DateTime;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "class",
     "pluralName": "classes",
-    "displayName": "Class"
+    "displayName": "Class",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -39,6 +40,9 @@
       "relation": "manyToMany",
       "target": "api::teacher.teacher",
       "mappedBy": "classes"
+    },
+    "CountTeachers": {
+      "type": "integer"
     }
   }
 }
