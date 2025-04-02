@@ -386,7 +386,13 @@ export interface ApiClassClass extends Struct.CollectionTypeSchema {
     };
   };
   attributes: {
-    CountTeachers: Schema.Attribute.Integer;
+    CountTeachers: Schema.Attribute.Integer &
+      Schema.Attribute.SetMinMax<
+        {
+          min: 0;
+        },
+        number
+      >;
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
