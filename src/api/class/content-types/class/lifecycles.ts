@@ -2,14 +2,14 @@ module.exports = {
   async afterUpdate(event) {
     const { params } = event;
 
-    const classSelect = await strapi.db.query("api::class.class").findOne({
-      where: { id: params.where.id },
-      populate: { teachers: true },
-    });
+    if (params.data.teachers.length > 0) {
+      const classSelect = await strapi.db.query("api::class.class").findOne({
+        where: { id: params.where.id },
+        populate: { teachers: true },
+      });
+      console.log("PARAMS TEACHERS DATA LENGTH");
+      console.log(classSelect.teachers);
 
-    console.log("PARAMS TEACHERS DATA LENGTH");
-    console.log(classSelect.teachers)
-    if (classSelect.teachers.length > 0) {
       console.log("CLASE SELECT");
       console.log(classSelect);
       const countTeacher = classSelect.teachers.length;
